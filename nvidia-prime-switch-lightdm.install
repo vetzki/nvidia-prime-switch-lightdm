@@ -1,0 +1,15 @@
+pre_install() {
+# add display-setup-script to lightdm.conf
+
+sed -i 's@.*display-setup-script=.*@display-setup-script=/etc/lightdm/display_setup.sh@' /etc/lightdm/lightdm.conf
+
+printf "\n\e[31m%s\e[39m\n\n" "Added xrandr commands to /etc/lightdm/lightdm.conf"
+}
+
+pre_remove() {
+# remove display-setup-script from lightdm.conf
+
+sed -i 's@display-setup-script=/etc/lightdm/display_setup.sh@#display-setup-script=@' /etc/lightdm/lightdm.conf
+
+printf "\n\e[31m%s\e[39m\n\n" "Removed xrandr commands from /etc/lightdm/lightdm.conf"
+}
