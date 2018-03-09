@@ -1,6 +1,6 @@
 pkgname="nvidia-prime-switch-lightdm"
 pkgver=1
-pkgrel=1
+pkgrel=2
 pkgdesc="(! use only with lightdm !) Setup nvidia and intel for optimus based laptops without bumblebee (! use only with lightdm !)"
 license=("none")
 kernelvers="$(uname -r | awk -F "." '{print $1 $2}')"
@@ -9,11 +9,11 @@ makedepends=('python')
 conflicts=('nvidia-prime-switch' 'nvidia-prime-switch-sddm')
 source=('prime-switch.py' 'prime-switch-conf.json' 'display_setup.sh' 'intel.conf' 'nvidia.conf' 'intel-modesetting.conf' 'nvidia-prime-displaymanager.hook')
 sha256sums=(
-'40d83133fd815b80936e4ae9579accea0beae4a119104381e295d404f64a34c0'
-'92a22f6815afcd1dca60c989b92435bec0125889c8c43f36ffffc2f6af5b4794'
+'e8c48331cac16734bbf3e4b5a0cca4749acd31f762c9dba38654c9ddf401bd8b'
+'574138661177cc5042636f237c8adc2e934a38adb7bf2851acd35d0115ca8569'
 'a9a20f98a94fe75f8b3a89868b9c0f66124fab8ff89b9cb535eeeaa6fbe74fba'
 'b7e686d0f689c9d7e2d99ffa6a3b3c110730e36a911b5672f711551b3e41d6a8'
-'847139b9d357134ed01a563e4d332a28d8c25cabd6d972db53baf4dee7c99e36'
+'8e0473885e05c7a3b00380db251884456a29111544f94faeabd945b442595891'
 'edd5b3968e0cf46dcc13a8335f71291b19355c8fc75c8c3af597540fe548c929'
 '73a67c2ba8f77253fbb1c36194fb29dd7aa6babeff2174078a8abff87265d604'
 )
