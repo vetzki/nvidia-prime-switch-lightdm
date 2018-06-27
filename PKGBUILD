@@ -1,6 +1,6 @@
 pkgname="nvidia-prime-switch-lightdm"
 pkgver=1
-pkgrel=2
+pkgrel=3
 pkgdesc="(! use only with lightdm !) Setup nvidia and intel for optimus based laptops without bumblebee (! use only with lightdm !)"
 license=("none")
 kernelvers="$(uname -r | awk -F "." '{print $1 $2}')"
@@ -10,7 +10,7 @@ makedepends=('python')
 conflicts=('nvidia-prime-switch' 'nvidia-prime-switch-sddm')
 source=('prime-switch.py' 'prime-switch-conf.json' 'display_setup.sh' 'intel.conf' 'nvidia.conf' 'intel-modesetting.conf' 'nvidia-prime-displaymanager.hook')
 sha256sums=(
-'e8c48331cac16734bbf3e4b5a0cca4749acd31f762c9dba38654c9ddf401bd8b'
+'001dd4e5c011d365a88f0095205aefe04b46cacd8cc70fda6460584ac55db5cb'
 '574138661177cc5042636f237c8adc2e934a38adb7bf2851acd35d0115ca8569'
 'a9a20f98a94fe75f8b3a89868b9c0f66124fab8ff89b9cb535eeeaa6fbe74fba'
 'b7e686d0f689c9d7e2d99ffa6a3b3c110730e36a911b5672f711551b3e41d6a8'
@@ -30,7 +30,7 @@ prepare() {
 # ensure right buisd (maybe not needed)
 pcis=$(python -c '
 from subprocess import getoutput
-std = getoutput("/usr/bin/lspci | grep VGA").split("\n")
+std = getoutput("lspci | grep -e VGA -e 3D").split("\n")
 pci = [ i.split(" ")[0] for i in std if "intel" in i.lower() ]
 pci += [ i.split(" ")[0] for i in std if "nvidia" in i.lower() ]
 cids = {}
