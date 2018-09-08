@@ -1,6 +1,6 @@
 pkgname="nvidia-prime-switch-lightdm"
 pkgver=1
-pkgrel=4
+pkgrel=5
 pkgdesc="(! use only with lightdm !) Setup nvidia and intel for optimus based laptops without bumblebee (! use only with lightdm !)"
 license=("none")
 kernelvers="$(uname -r | awk -F "." '{print $1 $2}')"
