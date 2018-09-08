@@ -5,12 +5,12 @@ pkgdesc="(! use only with lightdm !) Setup nvidia and intel for optimus based la
 license=("none")
 kernelvers="$(uname -r | awk -F "." '{print $1 $2}')"
 depends=('xf86-video-intel' 'python' 'lightdm')
-optdepends=("linux${kernelvers}-nvidia" 'lib32-nvidia-utils' 'nvidia-utils' "linux${kernelvers}-nvidia-390xx" 'lib32-nvidia-390xx-utils' 'nvidia-390xx-utils' 'python-magic: better support for --info switch')
+optdepends=("linux${kernelvers}-nvidia" 'lib32-nvidia-utils' 'nvidia-utils' "linux${kernelvers}-nvidia-390xx" 'lib32-nvidia-390xx-utils' 'nvidia-390xx-utils')
 makedepends=('python')
 conflicts=('nvidia-prime-switch' 'nvidia-prime-switch-sddm')
 source=('prime-switch.py' 'prime-switch-conf.json' 'display_setup.sh' 'intel.conf' 'nvidia.conf' 'intel-modesetting.conf' 'nvidia-prime-displaymanager.hook')
 sha256sums=(
-'001dd4e5c011d365a88f0095205aefe04b46cacd8cc70fda6460584ac55db5cb'
+'eabaaa8d12fd14a9b66805f365cabaaab3a0f824dddccf127a716d543a71c687'
 '574138661177cc5042636f237c8adc2e934a38adb7bf2851acd35d0115ca8569'
 '2f9dca4dc2a103d9779840fe89e76e177935feaf9b82c6c90619bcf330b3b670'
 'b7e686d0f689c9d7e2d99ffa6a3b3c110730e36a911b5672f711551b3e41d6a8'
