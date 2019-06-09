@@ -1,6 +1,6 @@
 pkgname="nvidia-prime-switch-lightdm"
 pkgver=1
-pkgrel=6
+pkgrel=7
 pkgdesc="(! use only with lightdm !) Setup nvidia and intel for optimus based laptops without bumblebee (! use only with lightdm !)"
 license=("none")
 install="${pkgname}".install
